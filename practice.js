@@ -11,3 +11,21 @@ const number2 = arr.sort((a,b) => {
 });
 
 // End this part
+
+// Generate a random number
+
+const randomNumber = Math.random() * (10 - 1) + 1 ;
+
+// to integer 
+const integer = Math.floor(randomNumber)
+
+// Filtering the name
+const search = prompt("Enter your search!");
+console.log(search)
+
+const array = ["junayed", "mozahid", "josim", "korim", "rohim"];
+
+const data = arr.filter(value => search == value);
+console.log("Result:", data)
+
+
