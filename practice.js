@@ -21,11 +21,14 @@ const integer = Math.floor(randomNumber)
 
 // Filtering the name
 const search = prompt("Enter your search!");
-console.log(search)
+// console.log(search)
 
 const array = ["junayed", "mozahid", "josim", "korim", "rohim"];
 
 const data = arr.filter(value => search == value);
-console.log("Result:", data)
+// console.log("Result:", data)
 
+//finding the last number of array
+
+console.log(arr[arr.length - 1])
 
