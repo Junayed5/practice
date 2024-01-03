@@ -42,7 +42,6 @@ Math.min(1, 2, 3);
 Math.max.apply(null, [12, 434, 53, 65, 67]);
 Math.min.apply(null, [12, 434, 53, 6567]);
 
-
 const cars = [
   { type: "Volvo", year: 2016 },
   { type: "Saab", year: 2001 },
@@ -54,7 +53,6 @@ const cars = [
 cars.sort((a, b) => {
   return a.year - b.year;
 });
-
 
 //finding array object string sorting
 
@@ -68,6 +66,30 @@ cars.sort((a, b) => {
   if (x < y) {
     return -1;
   }
-  return 0
+  return 0;
 });
 
+const countries = async () => {
+  const res = await fetch("https://restcountries.com/v3.1/all");
+  const country = await res.json();
+  const name = country.map((c) => c.name.common);
+  document.getElementById("name").innerHTML = name;
+};
+
+countries();
+
+const brothers = [
+  { name: "Junayed", age: 20 },
+  { name: "Bayjid", age: 25 },
+  { name: "Neser", age: 23 },
+];
+
+const totalAge = brothers.reduce((total, value) => {
+  return total.age + value.age;
+});
+
+console.log(totalAge);
+
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce((a, b) => a + b);
+console.log(sum)
