@@ -84,12 +84,12 @@ const brothers = [
   { name: "Neser", age: 23 },
 ];
 
-const totalAge = brothers.reduce((total, value) => {
-  return total.age + value.age;
-});
+ const totalAge = brothers?.reduce((prev, current) => {
+  return prev + current.age
+}, 0);
 
 console.log(totalAge);
 
 const numbers = [45, 4, 9, 16, 25];
 let sum = numbers.reduce((a, b) => a + b);
-console.log(sum)
+console.log(sum);
