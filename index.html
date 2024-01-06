@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <h1>Countries</h1>
     <div id="name"></div>
+
+    <form class="form" onsubmit="formSubmit(event)">
+        <label for="name">Name</label>
+        <input class="input" type="text" placeholder="Enter Your Name" name="name"><br>
+        <label for="age">Age</label><br>
+        <input class="input" type="number" placeholder="Enter Your Age" name="age"><br>
+        <input class="submit" type="submit" value="Submit">
+    </form>
 
     <script src="practice.js"></script>
 </body>

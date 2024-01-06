@@ -69,6 +69,8 @@ cars.sort((a, b) => {
   return 0;
 });
 
+// end
+
 const countries = async () => {
   const res = await fetch("https://restcountries.com/v3.1/all");
   const country = await res.json();
@@ -78,14 +80,16 @@ const countries = async () => {
 
 countries();
 
+// array reduce method ----
+
 const brothers = [
   { name: "Junayed", age: 20 },
   { name: "Bayjid", age: 25 },
   { name: "Neser", age: 23 },
 ];
 
- const totalAge = brothers?.reduce((prev, current) => {
-  return prev + current.age
+const totalAge = brothers?.reduce((prev, current) => {
+  return prev + current.age;
 }, 0);
 
 console.log(totalAge);
@@ -93,3 +97,22 @@ console.log(totalAge);
 const numbers = [45, 4, 9, 16, 25];
 let sum = numbers.reduce((a, b) => a + b);
 console.log(sum);
+
+//---- end ----
+
+//---Local storage--
+
+const formSubmit = (event) => {
+
+  const data = [];
+
+  event.preventDefault();
+
+  const name = event.target["name"].value;
+  const age = event.target["age"].value;
+
+  const user = { name, age };
+  const pushData = data.concat(user);
+
+  console.log(pushData)
+};
