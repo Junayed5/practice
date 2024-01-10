@@ -104,15 +104,20 @@ console.log(sum);
 
 const formSubmit = (event) => {
 
-  const data = [];
-
   event.preventDefault();
 
   const name = event.target["name"].value;
   const age = event.target["age"].value;
+  let newAge = parseInt(age)
 
-  const user = { name, age };
-  const pushData = data.concat(user);
+  const user = { name, age: newAge };
+  const db = localStorage.getItem("users");
+  const parseDb = JSON.parse(db);
+  const newArr = [...parseDb, user];
+  const arrJson = JSON.stringify(newArr);
+  localStorage.setItem("users", arrJson);
 
-  console.log(pushData)
+  
 };
+
+
