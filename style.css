@@ -1,25 +1,35 @@
 .form {
-    height: 300px;
-    width: 250px;
-    border: solid 1px;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+  height: 300px;
+  width: 250px;
+  border: solid 1px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .input {
-    height: 30px;
-    width: 200px;
-    justify-content: center;
+  height: 30px;
+  width: 200px;
+  justify-content: center;
 }
 
 .submit {
-    height: 40px;
-    width: 210px;
-    background-color: aqua;
-    color: midnightblue;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 14px;
+  height: 40px;
+  width: 210px;
+  background-color: aqua;
+  color: midnightblue;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cart {
+  height: 300px;
+  width: 320px;
+  border: solid violet;
+  border-radius: 5px;
+}
+.cart-heading {
+  text-align: center;
 }
