@@ -120,6 +120,9 @@ const formSubmit = (event) => {
   
 };
 
+
+// Learn with sumit problem solving
+
 // How to find a leap year
 
 const getLeapYear = (year) => {
@@ -129,3 +132,23 @@ const getLeapYear = (year) => {
     return `${year} is not leap year`
   }
 }
+
+
+// Vowel counter function
+
+const vowels = ["a", "e", "i","o","u","A","E","I","O","U",];
+
+const countVowels = (sentence) => {
+  let count = 0;
+
+  const letters = Array.from(sentence);
+  letters.forEach((letter)=> {
+    if (vowels.includes(letter)) {
+      count++;
+    }
+  })
+
+  return count;
+}
+
+console.log(countVowels("I Love Allah in my soul"))
