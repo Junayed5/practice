@@ -103,12 +103,11 @@ console.log(sum);
 //---Local storage--
 
 const formSubmit = (event) => {
-
   event.preventDefault();
 
   const name = event.target["name"].value;
   const age = event.target["age"].value;
-  let newAge = parseInt(age)
+  let newAge = parseInt(age);
 
   const user = { name, age: newAge };
   const db = localStorage.getItem("users");
@@ -116,39 +115,49 @@ const formSubmit = (event) => {
   const newArr = [...parseDb, user];
   const arrJson = JSON.stringify(newArr);
   localStorage.setItem("users", arrJson);
-
-  
 };
-
 
 // Learn with sumit problem solving
 
 // How to find a leap year
 
 const getLeapYear = (year) => {
-  if (year % 400 === 0 || ((year % 4 ===0) && (year % 100 !== 0))) {
-    return `${year} is leap year`
-  } else{
-    return `${year} is not leap year`
+  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    return `${year} is leap year`;
+  } else {
+    return `${year} is not leap year`;
   }
-}
-
+};
 
 // Vowel counter function
 
-const vowels = ["a", "e", "i","o","u","A","E","I","O","U",];
+const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
 
 const countVowels = (sentence) => {
   let count = 0;
 
   const letters = Array.from(sentence);
-  letters.forEach((letter)=> {
+  letters.forEach((letter) => {
     if (vowels.includes(letter)) {
       count++;
     }
-  })
+  });
 
   return count;
-}
+};
 
-console.log(countVowels("I Love Allah in my soul"))
+console.log(countVowels("I Love Allah in my soul"));
+
+//Find the duplicate number from array
+
+const allNumbers = [1, 2, 4, 5, 6, 5, 2, 1, 3, 6, 7];
+
+const duplicate = allNumbers.filter((value, index, array) => {
+  return array.indexOf(value) !== index;
+});
+
+// Find unique number
+const unique = allNumbers.filter((value, index, array) => {
+  return array.indexOf(value) === index;
+});
+console.log(duplicate, unique);
